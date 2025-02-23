@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>请在浏览器中打开</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>请点击下方按钮在浏览器中打开</h1>
+    <p>由于微信限制，请复制链接并在浏览器中访问，或点击下方按钮跳转。</p>
+    <a href="https://hkphb.github.io" class="btn">在浏览器中打开</a>
+    <p>如果无法跳转，请手动复制以下链接到浏览器：</p>
+    <p><strong>https://hkphb.github.io</strong></p>
+
+    <script>
+        // 尝试自动跳转（部分浏览器可能不支持）
+        var isWeChat = /MicroMessenger/i.test(navigator.userAgent);
+        if (isWeChat) {
+            alert("请点击右上角菜单，选择在浏览器中打开。");
+        } else {
+            window.location.href = "https://hkphb.github.io";
+        }
+    </script>
+</body>
+</html>
